@@ -61,7 +61,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   String _evaluateMultiplicationAndDivision(String expression) {
     RegExp exp = RegExp(r'(\d+(\.\d+)?)([*/])(\d+(\.\d+)?)'); // wyszukuje liczby całkowite
     while (exp.hasMatch(expression)) {
-      expression = expression.replaceAllMapped(exp, (match) { // kurwa chuj wie
+      expression = expression.replaceAllMapped(exp, (match) {
         double left = double.parse(match.group(1)!);
         double right = double.parse(match.group(4)!);
         String operator = match.group(3)!;
